@@ -1,7 +1,7 @@
 <template>
   <header>
     <container>
-      <router-link to="/">Yappy GitLab</router-link>
+      <router-link to="/">Yappy</router-link>
 
       <nav>
         <router-link to="/docs">Documentation</router-link><!--

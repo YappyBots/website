@@ -1,18 +1,19 @@
 <template>
   <div id="home" v-once>
     <slide id="jumbotron">
-      Yappy GitLab
+      Yappy
     </slide>
 
     <section id="info">
       <div class="info-item">
         <h2>About</h2>
         <p>
-          Monitor your GitLab repos with Yappy!
+          Monitor your Github and GitLab repos with Yappy!<br>
+          <i>Soon™: Trello and BitBucket (if wanted)</i>
         </p>
         <p>
-        Yappy, a powerful powerful <a href="https://nodejs.org/">NodeJS</a> discord bot, is built with <a href="https://discord.js.org/">discord.js</a>.
-        <a href="https://discordapp.com/developers/docs/intro">Discord API</a> very easily.
+        Yappy, a powerful powerful <a href="https://nodejs.org/">NodeJS</a> discord bot family, is built with <a href="https://discord.js.org/">discord.js</a>.
+
         </p>
       </div>
 

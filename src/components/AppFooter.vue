@@ -1,8 +1,8 @@
 <template>
   <footer>
     <container>
-      <strong><router-link to="/">Yappy GitLab</router-link></strong>
-      <p>A powerful library for interacting with the Discord API</p>
+      <strong><router-link to="/">Yappy</router-link></strong>
+      <p>Powerful Discord bots to interact with Github, Gitlab, and Trello (soon™)</p>
       <stats />
     </container>
   </footer>
