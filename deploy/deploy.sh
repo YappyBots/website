@@ -3,13 +3,13 @@
 
 set -e
 
-if [ "$TRAVIS_BRANCH" != "stable" -o -n "$TRAVIS_TAG" -o "$TRAVIS_PULL_REQUEST" != "false" ]; then
-  echo -e "\e[36m\e[1mNot building for a stable branch push - building without deploying."
+if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+  echo -e "\e[36m\e[1mBuild triggered for PR #${TRAVIS_PULL_REQUEST} to branch \"${TRAVIS_BRANCH}\" - building without deploying."
   npm run build
   exit 0
 fi
 
-echo -e "\e[36m\e[1mBuilding for a stable branch push - building and deploying."
+echo -e "\e[36m\e[1mBuilding for branch push ${TRAVIS_BRANCH} - building and deploying."
 
 # Initialise some useful variables
 REPO=`git config remote.origin.url`
