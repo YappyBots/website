@@ -10,7 +10,7 @@
 
   export default {
     name: 'types',
-    props: ['names', 'variable', 'nullable', 'docs'],
+    props: ['names', 'variable', 'nullable', 'docs', 'see'],
     components: {
       TypeLink,
     },

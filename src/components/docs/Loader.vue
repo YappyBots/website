@@ -43,6 +43,7 @@
           // Sort everything
           docs.classes.sort((a, b) => a.name.localeCompare(b.name));
           docs.typedefs.sort((a, b) => a.name.localeCompare(b.name));
+          docs.externals.sort((a, b) => a.name.localeCompare(b.name));
           for (const c of docs.classes) {
             if (c.props) c.props.sort((a, b) => a.name.localeCompare(b.name));
             if (c.methods) c.methods.sort((a, b) => a.name.localeCompare(b.name));
@@ -72,6 +73,11 @@
             ReadableStream: 'https://nodejs.org/dist/latest/docs/api/stream.html#stream_class_stream_readable',
             ChildProcess: 'https://nodejs.org/dist/latest/docs/api/child_process.html#child_process_class_childprocess',
           };
+
+          // Docs.externals.forEach(e => {
+          //   console.log(e.see);
+          //   docs.links[`external:${e.name}`] = `external/${e.name}`;
+          // });
 
           // Add links for everything
           docs.externals = docs.externals || [];

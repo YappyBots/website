@@ -39,7 +39,7 @@
         const params = this.$route.params;
         if (params.file) return `${params.category}/${params.file}`;
         if (params.search) return 'search';
-        return params.class || params.typedef;
+        return params.class || params.typedef || params.external;
       },
     },
 

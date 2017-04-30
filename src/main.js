@@ -16,6 +16,7 @@ import DocsViewerComponent from './components/docs/Viewer.vue';
 import FileViewerComponent from './components/docs/FileViewer.vue';
 import ClassViewerComponent from './components/docs/class-viewer/ClassViewer.vue';
 import TypedefViewerComponent from './components/docs/TypedefViewer.vue';
+import ExternalViewerComponent from './components/docs/ExternalViewer.vue';
 import DocsSearchComponent from './components/docs/Search.vue';
 
 require('./styles/master.scss');
@@ -31,6 +32,7 @@ const router = new VueRouter({
           { path: 'search', name: 'docs-search', component: DocsSearchComponent },
           { path: 'class/:class', name: 'docs-class', component: ClassViewerComponent },
           { path: 'typedef/:typedef', name: 'docs-typedef', component: TypedefViewerComponent },
+          { path: 'external/:external', name: 'docs-external', component: ExternalViewerComponent },
           { path: ':category/:file', name: 'docs-file', component: FileViewerComponent },
         ] },
       ] },
@@ -64,6 +66,13 @@ const router = new VueRouter({
             return {
               name: 'docs-typedef',
               params: { source: 'main', tag: to.params.tag, typedef: to.params.typedef },
+              query: { scrollTo: to.query.scrollto },
+            };
+          } },
+          { path: 'external/:external', redirect(to) {
+            return {
+              name: 'docs-external',
+              params: { source: 'main', tag: to.params.tag, external: to.params.external },
               query: { scrollTo: to.query.scrollto },
             };
           } },

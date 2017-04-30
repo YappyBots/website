@@ -8,17 +8,30 @@
 </template>
 
 <script>
+  import See from './See.vue';
+
   export default {
     name: 'type-link',
     props: ['docs', 'type'],
+    components: {
+      See,
+    },
+
     computed: {
       typeName() {
         if (this.type[0] === 'function') return 'Function';
-        return this.type[0];
+        return this.type[0].replace('external:', '');
       },
 
       link() {
         if (this.docs.links[this.type[0]]) return this.docs.links[this.type[0]];
+        const external = this.docs.externals.find(t => t.name === this.typeName.replace('external:', ''));
+        if (external) {
+          return {
+            name: 'docs-external',
+            params: { external: external.name },
+          };
+        }
         return null;
       },
     },

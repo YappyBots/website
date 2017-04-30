@@ -28,6 +28,15 @@
               </ul>
             </li>
 
+            <li v-if="results.externals.length > 0" key="externals" class="animated-list-item">
+              Externals
+              <ul>
+                <li v-for="external in results.externals">
+                  <router-link :to="{ name: 'docs-external', params: { external } }">{{ external }}</router-link>
+                </li>
+              </ul>
+            </li>
+
             <li v-if="results.methods.length > 0"  key="methods" class="animated-list-item">
               Methods
               <ul>
@@ -88,11 +97,21 @@
         const results = {
           classes: [],
           typedefs: [],
+          externals: [],
           methods: [],
           props: [],
           events: [],
           count: 0,
         };
+
+        this.docs.externals.forEach(e => {
+          if (!this.showPrivate && e.access === 'private') return;
+
+          if (e.name.toLowerCase().includes(q)) {
+            results.externals.push(e.name);
+            results.count++;
+          }
+        });
 
         this.docs.classes.forEach(c => {
           if (!this.showPrivate && c.access === 'private') return;

@@ -42,6 +42,17 @@
             </li>
           </ul>
         </li>
+
+        <li>
+          Externals
+          <ul>
+            <li v-for="external in docs.externals" v-if="showPrivate || external.access !== 'private'">
+              <router-link exact :to="{ name: 'docs-external', params: { external: external.name } }">
+                {{ external.name }}
+              </router-link>
+            </li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
