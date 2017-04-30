@@ -10,6 +10,11 @@
       <li>{{ YappyGitLab.stars }} stars</li>
       <li>{{ YappyGitLab.contributors }} contributors</li>
     </ul>
+    <ul class="stats">
+      <li style="list-style-type: none;"><b>Yappy Trello</b></li>
+      <li>{{ YappyTrello.stars }} stars</li>
+      <li>{{ YappyTrello.contributors }} contributors</li>
+    </ul>
   </div>
 </template>
 
@@ -23,6 +28,10 @@
     },
     YappyGitLab: {
       stars: '2+',
+      contributors: '2+',
+    },
+    YappyTrello: {
+      stars: '1+',
       contributors: '2+',
     },
     fetching: false,
@@ -50,8 +59,13 @@
       if (data.fetching) return data;
       data.fetching = true;
 
-      ['YappyGitLab', 'Yappy'].forEach(async repo => {
-        data[repo] = await fetch(`datitisev/DiscordBot-${repo}`);
+      ['Yappy', 'YappyGitLab', 'YappyTrello'].forEach(async repo => {
+        try {
+          data[repo] = await fetch(`datitisev/DiscordBot-${repo}`);
+        } catch (err) {
+          console.error(`Unable to fetch data for ${repo}`);
+          console.error(err);
+        }
       });
 
       return data;
