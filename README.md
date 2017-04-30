@@ -1,6 +1,6 @@
-# discord.js
+# Yappy Discord Bots
 
-> The website housing documentation for discord.js
+> The website housing documentation for yappy discord bots
 
 ## Build Setup
 
