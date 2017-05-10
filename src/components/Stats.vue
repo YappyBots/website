@@ -2,8 +2,8 @@
   <div>
     <ul class="stats">
       <li style="list-style-type: none;"><b>Yappy Github</b></li>
-      <li>{{ Yappy.stars }} stars</li>
-      <li>{{ Yappy.contributors }} contributors</li>
+      <li>{{ YappyGithub.stars }} stars</li>
+      <li>{{ YappyGithub.contributors }} contributors</li>
     </ul>
     <ul class="stats">
       <li style="list-style-type: none;"><b>Yappy GitLab</b></li>
@@ -22,7 +22,7 @@
   import request from 'superagent/superagent';
 
   const data = {
-    Yappy: {
+    YappyGithub: {
       stars: '10+',
       contributors: '1+',
     },
@@ -59,9 +59,9 @@
       if (data.fetching) return data;
       data.fetching = true;
 
-      ['Yappy', 'YappyGitLab', 'YappyTrello'].forEach(async repo => {
+      ['YappyGithub', 'YappyGitLab', 'YappyTrello'].forEach(async repo => {
         try {
-          data[repo] = await fetch(`datitisev/DiscordBot-${repo}`);
+          data[repo] = await fetch(`YappyBots/${repo}`);
         } catch (err) {
           console.error(`Unable to fetch data for ${repo}`);
           console.error(err);
