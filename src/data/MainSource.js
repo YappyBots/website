@@ -6,7 +6,7 @@ export default new DocsSource({
   id: 'yappygitlab',
   name: 'Yappy GitLab',
   global: 'Discord',
-  repo: 'datitisev/DiscordBot-YappyGitLab',
+  repo: 'YappyBots/YappyGitLab',
   defaultTag: 'master',
   branchFilter: branch => !branchBlacklist.has(branch),
   tagFilter: tag => semver.gte(tag.replace(/^v/, ''), '1'),
