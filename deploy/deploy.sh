@@ -17,7 +17,7 @@ SSH_REPO="https://datitisev:$ENCRYPTED_TOKEN@github.com/YappyBots/yappybots.gith
 SHA=`git rev-parse --verify HEAD`
 
 # Checkout the repo in the target branch
-TARGET_BRANCH="master"
+TARGET_BRANCH="gh-pages"
 git clone $REPO dist -b $TARGET_BRANCH
 
 # Build the site
@@ -29,4 +29,4 @@ git add --all .
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 git commit -m "Site build: ${SHA}" || true
-git push -q $SSH_REPO $TARGET_BRANCH &> /dev/null
+git push -q $SSH_REPO master &> /dev/null
