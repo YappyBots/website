@@ -12,12 +12,12 @@ fi
 echo -e "\e[36m\e[1mBuilding for branch push ${TRAVIS_BRANCH} - building and deploying."
 
 # Initialise some useful variables
-REPO=`git config remote.origin.url`
+REPO=`https://github.com/YappyBots/yappybots.github.io.git`
 SSH_REPO="https://datitisev:$ENCRYPTED_TOKEN@github.com/YappyBots/yappybots.github.io"
 SHA=`git rev-parse --verify HEAD`
 
 # Checkout the repo in the target branch
-TARGET_BRANCH="gh-pages"
+TARGET_BRANCH="master"
 git clone $REPO dist -b $TARGET_BRANCH
 
 # Build the site
@@ -29,4 +29,4 @@ git add --all .
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 git commit -m "Site build: ${SHA}" || true
-git push -q $SSH_REPO master &> /dev/null
+git push -q $SSH_REPO $TARGET_BRANCH 2> /dev/null
