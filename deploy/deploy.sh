@@ -12,7 +12,7 @@ fi
 echo -e "\e[36m\e[1mBuilding for branch push ${TRAVIS_BRANCH} - building and deploying."
 
 # Initialise some useful variables
-REPO=`https://github.com/YappyBots/yappybots.github.io.git`
+REPO="https://github.com/YappyBots/yappybots.github.io.git"
 SSH_REPO="https://datitisev:$ENCRYPTED_TOKEN@github.com/YappyBots/yappybots.github.io"
 SHA=`git rev-parse --verify HEAD`
 
