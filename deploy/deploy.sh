@@ -17,7 +17,7 @@ SSH_REPO="https://datitisev:$ENCRYPTED_TOKEN@github.com/YappyBots/yappybots.gith
 SHA=`git rev-parse --verify HEAD`
 
 # Checkout the repo in the target branch
-TARGET_BRANCH="gh-pages"
+TARGET_BRANCH="master"
 git clone $REPO dist -b $TARGET_BRANCH
 
 # Build the site
