@@ -29,4 +29,4 @@ git add --all .
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 git commit -m "Site build: ${SHA}" || true
-git push -q $SSH_REPO $TARGET_BRANCH 2> /dev/null
+git push -qf $SSH_REPO $TARGET_BRANCH 2> /dev/null
