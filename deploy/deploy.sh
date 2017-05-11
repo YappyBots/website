@@ -13,7 +13,7 @@ echo -e "\e[36m\e[1mBuilding for branch push ${TRAVIS_BRANCH} - building and dep
 
 # Initialise some useful variables
 REPO=`git config remote.origin.url`
-SSH_REPO="https://datitisev:$ENCRYPTED_TOKEN@github.com/YappyBots/website"
+SSH_REPO="https://datitisev:$ENCRYPTED_TOKEN@github.com/YappyBots/yappybots.github.io"
 SHA=`git rev-parse --verify HEAD`
 
 # Checkout the repo in the target branch
