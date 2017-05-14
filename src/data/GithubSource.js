@@ -1,7 +1,7 @@
-import semver from 'semver';
 import DocsSource from './DocsSource';
 
 const branchBlacklist = new Set(['gh-pages', 'gh-pages-dev', 'docs']);
+const tagBlacklist = new Set([]);
 export default new DocsSource({
   id: 'yappygithub',
   name: 'Yappy Github',
@@ -9,5 +9,5 @@ export default new DocsSource({
   repo: 'YappyBots/YappyGithub',
   defaultTag: 'master',
   branchFilter: branch => !branchBlacklist.has(branch),
-  tagFilter: tag => semver.gte(tag.replace(/^v/, ''), '1'),
+  tagFilter: tag => !tagBlacklist.has(tag),
 });
