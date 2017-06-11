@@ -7,7 +7,7 @@ export default new DocsSource({
   name: 'Yappy Github',
   global: 'Discord',
   repo: 'YappyBots/YappyGithub',
-  defaultTag: 'master',
+  defaultTag: 'rewrite',
   branchFilter: branch => !branchBlacklist.has(branch),
   tagFilter: tag => !tagBlacklist.has(tag),
 });
