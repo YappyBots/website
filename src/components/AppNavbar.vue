@@ -5,7 +5,7 @@
 
       <nav>
         <router-link to="/docs">Documentation</router-link><!--
-        --><a href="https://github.com/datitisev/DiscordBot-YappyGitLab">GitHub</a>
+        --><a href="https://github.com/YappyBots">GitHub</a>
       </nav>
     </container>
   </header>

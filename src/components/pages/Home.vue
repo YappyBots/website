@@ -38,7 +38,8 @@
 
       <div class="full-info-item">
         <router-link to="/docs" class="big-ass-btn">Get started</router-link>
-        <a href="https://discord.gg/HHqndMG" class="big-ass-btn discord">Discord</a>
+        <a href="/#/discord" class="big-ass-btn discord">Discord</a>
+        <a href="/#/github" class="big-ass-btn discord">Github</a>
       </div>
     </section>
   </div>
@@ -61,7 +62,7 @@
     mounted() {
       if (!konami) {
         konami = new Konami(() => {
-          document.getElementById('logo').style.animation = 'spin 0.5s infinite linear';
+          document.querySelector('#home > .slide .container').style.animation = 'spin 0.5s infinite linear';
           konami.disable();
         });
       } else {
