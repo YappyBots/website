@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "konami-code-js": "^0.8.0",
-    "marked": "^0.3.6",
+    "marked": "^0.3.18",
     "superagent": "^3.5.0",
     "semver": "^5.3.0",
     "vue": "^2.2.1",
