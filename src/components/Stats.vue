@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import request from 'superagent/superagent';
+  import request from 'superagent';
 
   const data = {
     YappyGithub: {
