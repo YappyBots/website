@@ -87,7 +87,7 @@
   @import '../../styles/theming';
   @import '../../styles/mq';
 
-  $input-border: ;
+  $input-border: 0;
   $bg: lighten($color-navbar-bg, 6.5%);
 
   #docs-navbar {
