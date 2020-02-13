@@ -1,0 +1,16 @@
+<svg data-v-fde0c5aa="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" class="icon">
+    <defs data-v-fde0c5aa=""></defs>
+    <defs data-v-fde0c5aa="">
+        <linearGradient data-v-fde0c5aa="" gradientTransform="rotate(25)" id="a71300fe-ea4c-4188-b556-44e7e89c5634"
+            x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop data-v-fde0c5aa="" offset="0%" stop-color="#5106FF" stop-opacity="1"></stop>
+            <stop data-v-fde0c5aa="" offset="100%" stop-color="#61CBF2" stop-opacity="1"></stop>
+        </linearGradient>
+    </defs>
+    <g data-v-fde0c5aa="" id="45b29c82-1016-4d5f-bd66-7996e4df45c4" fill="url(#a71300fe-ea4c-4188-b556-44e7e89c5634)"
+        stroke="none" transform="matrix(2.75,0,0,2.75,12.5,12.5)">
+        <path
+            d="M71.8 65H70c-6.4 0-10.2-6.5-15.5-17.2C49.1 37.1 43.1 25 30 25h-1.3c-1.7-3-5-5-8.7-5-5.5 0-10 4.5-10 10s4.5 10 10 10c3.7 0 6.9-2 8.7-5H30c6.4 0 10.2 6.5 15.5 17.2C50.9 62.9 56.9 75 70 75h1.8v5.5L90 70 71.8 59.5V65zM20 36c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm29.6-1h22.2v5.5L90 30 71.8 19.5V25H38.9c4.4 2.1 7.9 5.8 10.7 10z">
+        </path>
+    </g>
+</svg>
