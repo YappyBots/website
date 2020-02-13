@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install Dependencies
+        run: npm ci
+      
+      - name: Build
+        run: |
+          npm run build
+          cp ./CNAME ./docs/.vuepress/dist
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: success()
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: YappyBots/yappybots.github.io
+          publish_dir: docs/.vuepress/dist
+          publish_branch: master
