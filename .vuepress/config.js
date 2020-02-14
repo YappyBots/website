@@ -35,11 +35,5 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/icon.svg' }]
     ],
-    plugins: ['@vuepress/active-header-links', [
-        '@vuepress/pwa',
-        {
-            serviceWorker: true,
-            updatePopup: true
-        }
-    ]],
+    plugins: ['@vuepress/active-header-links'],
 };
