@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Yappy Bots',
     theme: 'yuu',
-    base: 'https://www.yappybots.tk/',
+    base: '/',
     themeConfig: {
         logo: '/icon.svg',
         lastUpdated: 'Last Updated',
