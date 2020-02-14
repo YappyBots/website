@@ -1,6 +1,5 @@
 module.exports = {
     title: 'Yappy Bots',
-    theme: 'yuu',
     base: '/',
     themeConfig: {
         logo: '/icon.svg',
@@ -11,11 +10,6 @@ module.exports = {
         nextLinks: false,
         prevLinks: false,
         smoothScroll: true,
-        yuu: {
-            defaultDarkTheme: true,
-            colorThemes: [],
-            disableThemeIgnore: true,
-        },
         nav: [
             { text: 'Git', link: 'https://github.com/YappyBots' },
             { text: 'Sponsor', link: 'https://github.com/sponsors/datitisev' },
