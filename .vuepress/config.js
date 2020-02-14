@@ -23,12 +23,12 @@ module.exports = {
             {
                 title: 'GitHub',
                 collapsable: false,
-                children: ['/github/', '/github/contributing'],
+                children: ['/docs/github/', '/docs/github/contributing'],
             },
             {
                 title: 'GitLab',
                 collapsable: false,
-                children: ['/gitlab/'],
+                children: ['/docs/gitlab/'],
             }
         ]
     },

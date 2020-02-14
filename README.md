@@ -1,4 +1,4 @@
-![banner](../public/img/default.svg)
+![banner](./public/img/default.svg)
 
 Monitor your Github and GitLab repos with Yappy!
 

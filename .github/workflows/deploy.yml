@@ -18,7 +18,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-          cp ./CNAME ./docs/.vuepress/dist
+          cp CNAME .vuepress/dist
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -26,5 +26,5 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: YappyBots/yappybots.github.io
-          publish_dir: docs/.vuepress/dist
+          publish_dir: .vuepress/dist
           publish_branch: master
