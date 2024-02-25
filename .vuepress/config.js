@@ -18,7 +18,7 @@ module.exports = {
             {
                 title: 'GitHub',
                 collapsable: false,
-                children: ['/docs/github/', '/docs/github/contributing'],
+                children: ['/docs/github/', '/docs/github/contributing', '/docs/github/permissions', '/docs/github/privacy'],
             },
             {
                 title: 'GitLab',
