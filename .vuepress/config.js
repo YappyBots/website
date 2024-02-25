@@ -12,7 +12,7 @@ module.exports = {
         smoothScroll: true,
         nav: [
             { text: 'Git', link: 'https://github.com/YappyBots' },
-            { text: 'Sponsor', link: 'https://github.com/sponsors/datitisev' },
+            { text: 'Sponsor', link: 'https://github.com/sponsors/dsevillamartin' },
         ],
         sidebar: [
             {
