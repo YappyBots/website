@@ -7,10 +7,11 @@
   "author": "",
   "scripts": {
     "dev": "vuepress dev .",
-    "build": "vuepress build ."
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vuepress build ."
   },
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.9.10",
+    "cross-env": "^7.0.3",
     "vuepress": "^1.9.10"
   }
 }
