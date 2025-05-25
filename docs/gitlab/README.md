@@ -16,7 +16,7 @@ Follow the following steps to set up Yappy with any repo on GitLab.
 
 1. Go to the GitLab repo you want to have events for
 2. Click Settings > Integrations
-3. Set `URL` to [https://www.yappybots.tk/gitlab](https://www.yappybots.tk/gitlab)
+3. Set `URL` to [https://yappy.dsev.dev/gitlab](https://yappy.dsev.dev/gitlab)
 4. Select the events you want to emit to the channel
 5. Click "Add Webhook"
 
