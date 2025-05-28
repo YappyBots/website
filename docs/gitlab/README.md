@@ -6,11 +6,16 @@ title: Getting Started
 
 Follow the following steps to set up Yappy with any repo on GitLab.
 
+> The commands used to be ran with the prefix `GL! ` before some Discord changes a while back.
+> 
+> Use a ping to the bot (`@Yappy, the GitLab Monitor#7339`) so that it can see your messages, and give it commands that way.
+> The application does not support slash commands.
+
 ## Discord
 
 1. Go to the channel you want events in for a repo
-2. Say `GL! init REPO`, where `REPO` can be `username/repo`, a GitLab url... see more usage info at `GL! help init`
-    - If the repository is private, make sure you tell Yappy that with `GL! init REPO private`
+2. Say `@Yappy, the GitLab Monitor#7339 init REPO`, where `REPO` can be `username/repo`, a GitLab url... see more usage info at `@Yappy, the GitLab Monitor#7339 init`
+    - If the repository is private, make sure you tell Yappy that with `init REPO private`
 
 ## GitLab
 
